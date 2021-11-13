@@ -10,7 +10,12 @@ $responsearray = json_decode($getupdate, TRUE);
 
 $chatid = $responsearray['message']['chat']['id'];
 
-$message = $responsearray['message']['text'];
+if ($responsearray['message']['text']=="/start") {
+$message = "welcome to bot";
+}
+else () {
+message = $responsearray['message']['text'];
+}
 
 $parameter = array(
 		'chat_id' => $chatid, 
