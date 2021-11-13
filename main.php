@@ -14,7 +14,7 @@ if ($responsearray['message']['text']=="/start") {
 $message = "welcome to bot";
 }
 else {
-message = $responsearray['message']['text'];
+$message = $responsearray['message']['text'];
 }
 
 $parameter = array(
