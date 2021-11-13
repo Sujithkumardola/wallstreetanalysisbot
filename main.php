@@ -13,7 +13,7 @@ $chatid = $responsearray['message']['chat']['id'];
 if ($responsearray['message']['text']=="/start") {
 $message = "welcome to bot";
 }
-else () {
+else {
 message = $responsearray['message']['text'];
 }
 
