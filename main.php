@@ -10,7 +10,7 @@ $responsearray = json_decode($getupdate, TRUE);
 
 $chatid = $responsearray['message']['chat']['id'];
 
-$message = $responsearray['text'];
+$message = $responsearray['message']['text'];
 
 $parameter = array(
 		'chat_id' => $chatid, 
