@@ -15,6 +15,7 @@ $message = "welcome to bot";
 }
 else {
 $message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
+$message = str_replace("<p>","",$message);
 }
 
 $parameter = array(
@@ -22,7 +23,7 @@ $parameter = array(
 		'text' => $message,
 		);
  
-$request_url = $link.'/sendMessage?'.http_build_query($parameter)."&parse_mode=html"; 
+$request_url = $link.'/sendMessage?'.http_build_query($parameter); 
  
 file_get_contents($request_url);
 
