@@ -14,7 +14,8 @@ if ($responsearray['message']['text']=="/start") {
 $message = "welcome to bot";
 }
 else {
-$message = $responsearray['message']['text'];
+$message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
+$message = urlencode($message);
 }
 
 $parameter = array(
