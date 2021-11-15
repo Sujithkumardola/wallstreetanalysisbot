@@ -11,13 +11,17 @@ $responsearray = json_decode($getupdate, TRUE);
 $chatid = $responsearray['message']['chat']['id'];
 
 if ($responsearray['message']['text']=="/start") {
-$message = "welcome to bot";
+$message = "welcome to @wallstreetanalysisbot, text /fetch for prediction";
 }
-else {
+elseif ($responsearray['message']['text']=="/fetch"){
 $message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
 $message = str_replace("<p>","",$message);
-$messgae = str_replace("Bullish</p>","",$message);
-$message = str_replace("Bearish</p>","",$message);
+$messgae = str_replace("Bullish<p>","Bullish",$message);
+$message = str_replace("Bearish</p>","Bearish",$message);
+$message = str_replace("</p>","",$message);
+}
+else {
+$message="Invalid command";
 }
 
 $parameter = array(
