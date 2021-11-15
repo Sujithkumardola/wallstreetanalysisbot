@@ -22,7 +22,7 @@ $parameter = array(
 		'text' => $message,
 		);
  
-$request_url = $link.'/sendMessage?'.http_build_query($parameter)."parse_mode=html"; 
+$request_url = $link.'/sendMessage?'.http_build_query($parameter)."&parse_mode=html"; 
  
 file_get_contents($request_url);
 
