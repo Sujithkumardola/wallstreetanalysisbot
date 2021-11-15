@@ -18,12 +18,10 @@ $message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
 }
 
 $parameter = array(
-		'chat_id' => $chatid, 
-		'text' => $message,
-                'parse_mode' => "HTML"
+		'
 		);
 
-$request_url = $link.'/sendMessage?'.http_build_query($parameter); 
+$request_url = $link.'/sendMessage?parse_mode=HTML&chat_id='.$chatid."&text=".$message; 
 
 file_get_contents($request_url);
 
