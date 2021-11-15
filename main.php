@@ -17,7 +17,7 @@ else {
 $message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
 $message = str_replace("<p>","",$message);
 $messgae = str_replace("Bullish</p>","",$message);
-$message = str_replace("Bearish</p>","",$message)!
+$message = str_replace("Bearish</p>","",$message);
 }
 
 $parameter = array(
