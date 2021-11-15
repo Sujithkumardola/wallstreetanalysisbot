@@ -17,11 +17,7 @@ else {
 $message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
 }
 
-$parameter = array(
-		'
-		);
-
-$request_url = $link.'/sendMessage?chat_id='.$chatid."&text=".$message; 
+$request_url = $link.'/sendMessage?parse_mode=HTML&chat_id='.$chatid."&text=".$message; 
 
 file_get_contents($request_url);
 
