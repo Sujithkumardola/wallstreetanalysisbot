@@ -15,7 +15,6 @@ $message = "welcome to bot";
 }
 else {
 $message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
-$message = urlencode($message);
 }
 
 $parameter = array(
