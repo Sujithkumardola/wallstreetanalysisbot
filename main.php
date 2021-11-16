@@ -11,7 +11,7 @@ $responsearray = json_decode($getupdate, TRUE);
 $chatid = $responsearray['message']['chat']['id'];
 
 if ($responsearray['message']['text']=="/start") {
-$message = "welcome to @wallstreetanalysisbot \n text /fetch for prediction";
+$message = "welcome to @wallstreetanalysisbot \ntext /fetch for prediction";
 }
 elseif ($responsearray['message']['text']=="/fetch"){
 $message = file_get_contents("https://wsasentiapi.herokuapp.com/fetch");
@@ -35,7 +35,7 @@ file_get_contents($request_url);
 
 $parameter = array(
 		'chat_id' => $chatid, 
-		'text' => "Analyse best stocks to invest into at just $69/6 months \n Know more: https://bit.ly/3cjENwF",
+		'text' => "Analyse best stocks to invest into at just $69 for 6 months \nKnow more: https://bit.ly/3cjENwF",
 		);
  
 $request_url = $link.'/sendMessage?'.http_build_query($parameter); 
