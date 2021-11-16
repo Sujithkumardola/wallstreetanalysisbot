@@ -35,7 +35,7 @@ file_get_contents($request_url);
 
 $parameter = array(
 		'chat_id' => $chatid, 
-		'text' => "Analyse best stocks to invest into at just $69/6 months \n Know more: https://bit.ly/3cjENwF,
+		'text' => "Analyse best stocks to invest into at just $69/6 months \n Know more: https://bit.ly/3cjENwF",
 		);
  
 $request_url = $link.'/sendMessage?'.http_build_query($parameter); 
